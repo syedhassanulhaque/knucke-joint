@@ -79,7 +79,9 @@ function tCalc(load,crush_str,d1) {
 // 4. FAilure of knuckle pin Bending 
 
 function bendingStress(load,t,t1,d1) {
-    sigma_b=(16*load*1000*((t1/3)+(t/4)))/(Math.Pi*Math.pow(d1,3))
+    sigma_b=((16*load*1000*((t1/3)+(t/4)))/((Math.PI)*(Math.pow(d1,3))))
+    // console.log(((16*load*1000*((t1/3)+(t/4)))/((Math.PI)*(Math.pow(d1,3)))))
+    // console.log("sigma_b "+ sigma_b)
     return sigma_b;
 }
 
@@ -111,11 +113,16 @@ function evaluate() {
  t=tCalc(load_value,crush_str_value,d1);
 
  t1=0.75*t;
- t2= 0.5 *t;
+ t2= 0.5*t;
+
+ 
+//  bendingStress(100 ,10 ,178,567)
+
 
  sigma_b= bendingStress(load_value,t,t1,d1)
+// console.log("sigma_b"+ sigma_b)
 
- console.log( design=sigma_b<yield_str_value? "Design is Safe": "Design is not safe");
+ console.log( design= sigma_b<yield_str_value? "Design is Safe": "Design is not safe");
 
 //  d2= (d2Calc(d1,load,t,shear_str) >  d2Calc(d1,load,t,yield_str) ) ? d2Calc(d1,load,t,shear_str) :d2Calc(d1,load,t,yield_str) ;
 d2= d2Calc(d1,load_value,t,shear_str_value);
@@ -150,8 +157,8 @@ ans[3].innerHTML=d3;
 ans[4].innerHTML=t;
 ans[5].innerHTML=t1;
 ans[6].innerHTML=t2;
-    ans[7].innerHTML= design;
-
+ans[7].innerHTML= sigma_b;
+ans[8].innerHTML= design;
 }
 
 // evaluate()
