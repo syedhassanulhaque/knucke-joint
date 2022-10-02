@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knuckle Joint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Knuckle joint </h1>
+    <div class="container">
+        <div class="data">
+           <div> <label for="">load (in kN):</label> <input type="number" name="" id="load" >  </div>
+           <div> <label for="">Yield Strength of Material : (in MPa)</label> <input type="number" name="" id="yield_str" > </div>
+           <div> <label for="">Factor of safety :</label> <input type="number" name="" id="fos" > </div>
+           <div> <label for="">Crushing Strength (in MPa) :</label> <input type="number" name="" id="crush_str" > </div>
+           <div> <label for="">Shearing Strength (in MPa) :</label> <input type="number" name="" id="shear_str" > </div>
+           <div><button id="btn">Evaluate</button></div>
+        </div>
+        <div id="result">
+            <div> Value of d  (in mm) = <span class="ans"></span></div>
+            <div> Value of d1  (in mm) = <span class="ans"></span></div>
+            <div> Value of d2  (in mm)= <span class="ans"></span></div>
+            <div> Value of d3 (in mm) = <span class="ans"></span></div>
+            <div> Value of t (in mm) = <span class="ans"></span></div>
+            <div> Value of t1 (in mm) = <span class="ans"></span></div>
+            <div> Value of t2  (in mm) = <span class="ans"></span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

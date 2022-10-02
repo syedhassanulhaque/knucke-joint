@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("img/bg2.jpg");
+    background-size: contain;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: wheat;
+}
+.container{
+    width: 70vw;
+    height: 70vh;
+    border: 2px solid yellow;
+    background: rgba(0, 0, 0, 0.623);
+    display: flex;
+    flex-direction: column;
+
+}
+#result{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.data{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.data div {
+    margin: 5px;
+    padding: 5px;
+}
+.data div input{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid wheat;
+    width: width(100% );
+    color: wheat;
+}
+.data div button{
+    padding: 8px 25px;
+    color: wheat;
+    background: transparent;
+    border: 2px groove wheat;
+    transition: all .4s linear;
+}
+.data div button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
