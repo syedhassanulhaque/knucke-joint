@@ -115,7 +115,7 @@ function evaluate() {
 
  sigma_b= bendingStress(load_value,t,t1,d1)
 
- console.log( sigma_b<yield_str_value? "Design is Safe": "Design is not safe");
+ console.log( design=sigma_b<yield_str_value? "Design is Safe": "Design is not safe");
 
 //  d2= (d2Calc(d1,load,t,shear_str) >  d2Calc(d1,load,t,yield_str) ) ? d2Calc(d1,load,t,shear_str) :d2Calc(d1,load,t,yield_str) ;
 d2= d2Calc(d1,load_value,t,shear_str_value);
@@ -150,6 +150,7 @@ ans[3].innerHTML=d3;
 ans[4].innerHTML=t;
 ans[5].innerHTML=t1;
 ans[6].innerHTML=t2;
+    ans[7].innerHTML= design;
 
 }
 
